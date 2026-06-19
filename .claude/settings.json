@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev*)",
+      "Bash(npm run build*)",
+      "Bash(npm run lint*)",
+      "Bash(npm run start*)",
+      "Bash(find src -type f*)",
+      "Bash(find . -name '*.tsx' -not -path '*/node_modules/*'*)",
+      "Bash(find . -name '*.ts' -not -path '*/node_modules/*'*)",
+      "Bash(grep -r * src/)",
+      "Bash(grep -rn * src/)",
+      "Bash(ls *)",
+      "Bash(cat package.json)",
+      "Bash(mkdir -p src/*)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(git push*)",
+      "Bash(git reset --hard*)"
+    ]
+  }
+}

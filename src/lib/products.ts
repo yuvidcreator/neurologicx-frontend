@@ -1,0 +1,88 @@
+import type { Product } from "@/types";
+
+export const products: Product[] = [
+  {
+    id: "saloniq",
+    slug: "saloniq",
+    name: "SalonIQ",
+    tagline: "AI-Powered Management for Beauty & Wellness",
+    description:
+      "SalonIQ automates the daily operations of salons and spas — from smart appointment scheduling to staff performance and inventory — so you can focus on delivering exceptional client experiences.",
+    industry: "Beauty & Wellness",
+    iconName: "Sparkles",
+    accentFrom: "from-pink-500",
+    accentTo: "to-rose-600",
+    features: [
+      "AI-driven appointment scheduling & smart reminders",
+      "Client profile management with service history",
+      "Staff scheduling, shift management & performance analytics",
+      "Inventory tracking for products & supplies",
+      "Revenue & sales dashboard with trend forecasting",
+      "Multi-branch support with centralized control",
+      "Automated WhatsApp & SMS follow-ups",
+    ],
+    useCases: [
+      "Beauty salons & hair studios",
+      "Spa & wellness centers",
+      "Nail art & grooming studios",
+      "Skin & aesthetic clinics",
+    ],
+    cta: "Start Free Trial",
+  },
+  {
+    id: "clinicflow",
+    slug: "clinicflow",
+    name: "ClinicFlow",
+    tagline: "Smart Appointment & Patient Management for Clinics",
+    description:
+      "ClinicFlow streamlines the entire patient journey — from online booking and queue management to digital prescriptions and follow-up automation — helping clinics reduce wait times and improve patient outcomes.",
+    industry: "Healthcare",
+    iconName: "Stethoscope",
+    accentFrom: "from-cyan-500",
+    accentTo: "to-blue-600",
+    features: [
+      "Online & walk-in appointment booking with smart queue",
+      "Digital patient records & consultation history",
+      "Prescription & diagnosis management",
+      "Automated appointment reminders & follow-ups",
+      "Doctor availability & slot management",
+      "Revenue tracking, invoicing & insurance notes",
+      "Multi-doctor, multi-clinic dashboard",
+    ],
+    useCases: [
+      "General practice & family clinics",
+      "Specialist & consulting clinics",
+      "Dental & eye care clinics",
+      "Physiotherapy & rehabilitation centers",
+    ],
+    cta: "Book a Demo",
+  },
+  {
+    id: "stocksense",
+    slug: "stocksense",
+    name: "StockSense",
+    tagline: "AI Warehouse & Inventory Intelligence Platform",
+    description:
+      "StockSense gives warehouses and distribution centers real-time visibility into stock levels, movement patterns, and supplier performance — using AI to predict demand and prevent costly stockouts or overstock.",
+    industry: "Logistics & Warehousing",
+    iconName: "Warehouse",
+    accentFrom: "from-amber-500",
+    accentTo: "to-orange-600",
+    features: [
+      "Real-time inventory tracking with barcode & QR support",
+      "AI-powered demand forecasting & reorder alerts",
+      "Inbound / outbound shipment management",
+      "Supplier management & purchase order automation",
+      "Multi-location warehouse control from one dashboard",
+      "Expiry tracking & FIFO/LIFO inventory models",
+      "Custom reports & inventory health analytics",
+    ],
+    useCases: [
+      "FMCG & retail warehouses",
+      "E-commerce fulfillment centers",
+      "Pharmaceutical distribution",
+      "Manufacturing & raw material stores",
+    ],
+    cta: "Request Demo",
+  },
+];

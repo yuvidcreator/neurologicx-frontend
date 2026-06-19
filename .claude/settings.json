@@ -1,10 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run dev*)",
-      "Bash(npm run build*)",
-      "Bash(npm run lint*)",
-      "Bash(npm run start*)",
+      "Bash(yarn dev*)",
+      "Bash(yarn build*)",
+      "Bash(yarn lint*)",
+      "Bash(yarn start*)",
+      "Bash(yarn add*)",
+      "Bash(yarn install*)",
       "Bash(find src -type f*)",
       "Bash(find . -name '*.tsx' -not -path '*/node_modules/*'*)",
       "Bash(find . -name '*.ts' -not -path '*/node_modules/*'*)",
@@ -15,6 +17,7 @@
       "Bash(mkdir -p src/*)"
     ],
     "deny": [
+      "Bash(npm *)",
       "Bash(rm -rf *)",
       "Bash(git push*)",
       "Bash(git reset --hard*)"

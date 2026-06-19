@@ -46,13 +46,14 @@ Senior Full Stack Developer. Build production-quality, static marketing pages fo
 ## Tech Stack
 | Layer | Tool | Version |
 |---|---|---|
-| Framework | Next.js App Router | 15.5.4 |
+| Framework | Next.js App Router | 15.3.9 |
 | UI | React + TypeScript | 19 / 5 |
 | Styling | Tailwind CSS v4 | PostCSS plugin |
 | Icons | Lucide React | 0.545.0 |
 | Font | Geist Sans + Mono | loaded in layout.tsx |
+| Package manager | **yarn** — never use npm | yarn.lock is the lock file |
 
-**No new runtime dependencies without explicit approval. Check `package.json` first.**
+**No new runtime dependencies without explicit approval. Always use `yarn add <pkg>`, never `npm install`.**
 
 ---
 
@@ -254,9 +255,12 @@ linkedin: "https://www.linkedin.com/c/neurologicx/"
 
 ## Vercel Deployment
 - `trailingSlash: true` — all routes generate `index.html` in subdirectories
-- `outputFileTracingRoot` set in `next.config.ts`
+- `poweredByHeader: false` — suppresses `X-Powered-By: Next.js` response header
+- Security headers set globally: `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`
 - `metadataBase: new URL("https://www.neurologicx.com")` in `layout.tsx`
 - All pages are `○ (Static)` or `● (SSG)` — zero server-side rendering
 - `sitemap.xml` auto-generated at `/sitemap.xml`
 - `robots.txt` at `public/robots.txt` references `https://www.neurologicx.com/sitemap.xml`
+- **Package manager:** yarn — `package-lock.json` is gitignored, only `yarn.lock` committed
 - **To deploy:** push to GitHub → Vercel auto-deploys from `main` branch
+- **Never run `npm` commands** — always use `yarn dev`, `yarn build`, `yarn add`, etc.

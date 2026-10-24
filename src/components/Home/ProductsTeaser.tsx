@@ -66,7 +66,7 @@ function ProductCard({ product }: { product: Product }) {
       </ul>
 
       <Link
-        href={`/products/${product.slug}`}
+        href={`/products/#${product.slug}`}
         className={`inline-flex items-center gap-2 text-sm font-semibold bg-gradient-to-r ${styles.gradient} bg-clip-text text-transparent group-hover:gap-3 transition-all duration-200`}
       >
         {product.cta}
@@ -90,7 +90,7 @@ export default function ProductsTeaser() {
             </span>
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed">
-            Ready-to-deploy, vertical-specific SaaS platforms with AI at the core — so your business runs smoother from day one.
+            Three products, each built for one kind of business. They already fit the way your industry works, so your team isn&apos;t stuck bending generic software to fit.
           </p>
         </div>
 

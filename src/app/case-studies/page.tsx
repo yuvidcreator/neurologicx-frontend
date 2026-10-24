@@ -6,9 +6,9 @@ import CaseStudiesGrid from "@/components/CaseStudies/CaseStudiesGrid";
 import CTABanner from "@/components/Home/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Case Studies | NeurologicX — Client Success Stories",
+  title: "Case Studies",
   description:
-    "See how NeurologicX helped salons, clinics, warehouses, and agencies achieve measurable results with AI-powered products and cloud engineering.",
+    "How salons, clinics, warehouses and software agencies got measurable results with NeurologicX products and cloud engineering.",
 };
 
 export default function CaseStudiesPage() {
@@ -19,7 +19,7 @@ export default function CaseStudiesPage() {
         eyebrow="Case Studies"
         title="Real Clients."
         accent="Real Results."
-        description="Every engagement is measured against outcomes that matter — reduced costs, faster operations, and revenue growth our clients can prove."
+        description="We measure every project by what changes for the client: lower costs, faster operations and more revenue. Here are the numbers."
       />
       <CaseStudiesGrid />
       <CTABanner />

@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Zap } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 
 export default function Navbar() {
@@ -27,9 +28,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
 
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center shadow-md shadow-blue-500/30">
-              <Zap className="w-4 h-4 text-white" />
-            </div>
+            <Image src="/logo-mark.png" alt="NeurologicX logo" width={40} height={40} priority className="w-9 h-9 md:w-10 md:h-10" />
             <span className="text-base font-bold text-white tracking-tight">NeurologicX</span>
           </Link>
 

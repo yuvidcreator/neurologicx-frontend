@@ -6,9 +6,9 @@ import ProductsGrid from "@/components/Products/ProductsGrid";
 import CTABanner from "@/components/Home/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Products | NeurologicX — SalonIQ, ClinicFlow, StockSense",
+  title: "Products: SalonIQ, ClinicFlow and StockSense",
   description:
-    "Explore NeurologicX's AI-powered SaaS products: SalonIQ for beauty salons, ClinicFlow for clinics, and StockSense for warehouse management.",
+    "AI-powered software from NeurologicX: SalonIQ for salons and spas, ClinicFlow for clinics, and StockSense for warehouses and inventory.",
 };
 
 export default function ProductsPage() {
@@ -19,7 +19,7 @@ export default function ProductsPage() {
         eyebrow="SaaS Products"
         title="AI Software Built for"
         accent="Your Industry"
-        description="Three vertical-specific platforms — each designed to automate the exact workflows that slow your business down."
+        description="Three products, each built around the daily work of one industry. They take care of the repetitive tasks so your team can focus on customers."
       />
       <ProductsGrid />
       <CTABanner />

@@ -3,11 +3,11 @@ import type { NavLink, SocialLink } from "@/types";
 export const COMPANY = {
   name: "NeurologicX",
   legalName: "NeurologicX Innovations Labs",
-  tagline: "Get your Business To Next Level with A.I. & Automation.",
+  tagline: "Take your business to the next level with AI and automation.",
   description:
-    "NeurologicX Innovations Labs builds AI-powered SaaS products for industry verticals and provides cloud & DevOps engineering services for tech agencies.",
+    "NeurologicX Innovations Labs builds AI-powered software for specific industries and provides cloud and DevOps engineering for tech agencies.",
   domain: "www.neurologicx.com",
-  location: "Pune - Solapur, Maharashtra, India",
+  location: "Pune and Solapur, Maharashtra, India",
   email: "info@neurologicx.com",
   foundedYear: 2025,
 } as const;
@@ -40,9 +40,9 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 export const FOOTER_LINKS = {
   products: [
-    { label: "SalonIQ", href: "/products/saloniq" },
-    { label: "ClinicFlow", href: "/products/clinicflow" },
-    { label: "StockSense", href: "/products/stocksense" },
+    { label: "SalonIQ", href: "/products/#saloniq" },
+    { label: "ClinicFlow", href: "/products/#clinicflow" },
+    { label: "StockSense", href: "/products/#stocksense" },
   ],
   services: [
     { label: "Cloud Migration", href: "/services#cloud-migration" },
@@ -60,8 +60,8 @@ export const FOOTER_LINKS = {
 } as const;
 
 export const HOME_STATS = [
-  { value: "3+", label: "SaaS Products" },
-  { value: "20+", label: "Projects Delivered" },
-  { value: "15+", label: "Agency Partners" },
-  { value: "99.9%", label: "Uptime SLA" },
+  { value: "3", label: "SaaS Products" },
+  { value: "4", label: "Industries Served" },
+  { value: "3", label: "Cloud Platforms" },
+  { value: "2025", label: "Founded in Pune" },
 ] as const;

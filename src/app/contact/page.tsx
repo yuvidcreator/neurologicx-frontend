@@ -6,9 +6,9 @@ import PageHero from "@/components/Common/PageHero";
 import { COMPANY, SOCIAL_LINKS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact | NeurologicX",
+  title: "Contact Us",
   description:
-    "Get in touch with NeurologicX Innovations Labs. Whether you need a SaaS product demo or want to discuss a cloud migration — we respond within one business day.",
+    "Get in touch with NeurologicX. Book a product demo or talk to us about a cloud migration. We reply within one business day.",
 };
 
 const SOCIAL_ICONS = { Linkedin, Instagram, Facebook };
@@ -19,29 +19,29 @@ const CONTACT_CARDS = [
     label: "Email Us",
     value: COMPANY.email,
     href: `mailto:${COMPANY.email}`,
-    description: "We respond within one business day.",
+    description: "We reply within one business day.",
   },
   {
     Icon: MapPin,
     label: "Locations",
     value: COMPANY.location,
     href: null,
-    description: "Serving clients across India and globally.",
+    description: "We work with teams across India and overseas.",
   },
   {
     Icon: Clock,
     label: "Business Hours",
-    value: "Mon – Sat, 9:00 AM – 7:00 PM IST",
+    value: "Monday to Saturday, 9 AM to 7 PM IST",
     href: null,
-    description: "On-call support available for active engagements.",
+    description: "On-call support for clients with active projects.",
   },
 ];
 
 const INQUIRY_TYPES = [
-  { label: "SaaS Product Demo", desc: "See SalonIQ, ClinicFlow, or StockSense in action" },
-  { label: "Cloud Migration", desc: "AWS, Azure, or GCP migration scoping" },
-  { label: "DevOps Engagement", desc: "CI/CD, Kubernetes, or IaC setup" },
-  { label: "Partnership / White-label", desc: "Agency partnership and reseller inquiries" },
+  { label: "Product Demo", desc: "See SalonIQ, ClinicFlow or StockSense in action" },
+  { label: "Cloud Migration", desc: "Scoping a move to AWS, Azure or GCP" },
+  { label: "DevOps Engagement", desc: "CI/CD, Kubernetes or infrastructure as code" },
+  { label: "Partnerships and White Label", desc: "Agency partnerships and reseller inquiries" },
 ];
 
 export default function ContactPage() {
@@ -94,7 +94,7 @@ export default function ContactPage() {
                   <a href={`mailto:${COMPANY.email}`} className="text-blue-400 hover:text-blue-300 font-medium">
                     {COMPANY.email}
                   </a>{" "}
-                  with a brief description of your project and we&apos;ll point you in the right direction.
+                  with a few lines about your project and we&apos;ll point you in the right direction.
                 </p>
               </div>
             </div>
@@ -143,7 +143,7 @@ export default function ContactPage() {
                   <textarea
                     name="body"
                     rows={4}
-                    placeholder="Briefly describe your project or question..."
+                    placeholder="A few lines about your project or question"
                     className="w-full px-4 py-2.5 bg-slate-900 border border-slate-700 focus:border-blue-500 rounded-lg text-sm text-white placeholder-slate-500 outline-none transition-colors resize-none"
                   />
                 </div>
@@ -154,7 +154,7 @@ export default function ContactPage() {
                   Send Message
                 </button>
                 <p className="text-[11px] text-slate-500 text-center">
-                  This will open your email client. Alternatively, email us directly at {COMPANY.email}
+                  This opens your email app. You can also write to us directly at {COMPANY.email}.
                 </p>
               </form>
 

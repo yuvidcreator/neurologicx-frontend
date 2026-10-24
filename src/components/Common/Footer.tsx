@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Zap, Facebook, Instagram, Linkedin } from "lucide-react";
+import Image from "next/image";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { COMPANY, SOCIAL_LINKS, FOOTER_LINKS } from "@/lib/constants";
 
 const SOCIAL_ICONS = { Facebook, Instagram, Linkedin };
@@ -13,9 +14,7 @@ export default function Footer() {
 
           <div className="col-span-2">
             <Link href="/" className="inline-flex items-center gap-2.5 mb-5">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center">
-                <Zap className="w-4 h-4 text-white" />
-              </div>
+              <Image src="/logo-mark.png" alt="NeurologicX logo" width={40} height={40} className="w-10 h-10" />
               <span className="text-base font-bold text-white">NeurologicX</span>
             </Link>
             <p className="text-sm text-slate-400 leading-relaxed max-w-xs mb-6">

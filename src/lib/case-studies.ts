@@ -8,14 +8,14 @@ export const caseStudies: CaseStudy[] = [
     industry: "Beauty & Wellness",
     serviceUsed: "SalonIQ",
     challenge:
-      "Lumina was managing appointments through WhatsApp and a paper register across 3 branches. No-shows were running at 28%, staff schedules clashed weekly, and inventory was tracked manually on spreadsheets — leading to frequent stock-outs of high-demand products.",
+      "Lumina ran appointments for its 3 branches through WhatsApp and a paper register. No-shows were at 28%, staff schedules clashed every week, and stock was tracked by hand in spreadsheets, so their best-selling products kept running out.",
     solution:
-      "We onboarded Lumina onto SalonIQ, configured their 3 branches, migrated client history, and enabled automated SMS reminders and smart scheduling with real-time staff availability sync.",
+      "We set Lumina up on SalonIQ, configured all 3 branches and moved their client history across. Automated SMS reminders went live from day one, along with scheduling that checks real-time staff availability before confirming a booking.",
     results: [
-      { metric: "No-show Rate", value: "↓ 74%", description: "From 28% down to 7% with automated reminders" },
-      { metric: "Booking Time", value: "↓ 60%", description: "Appointments confirmed in under 2 minutes" },
-      { metric: "Revenue Growth", value: "↑ 32%", description: "More bookings, fewer cancellations in 90 days" },
-      { metric: "Inventory Waste", value: "↓ 45%", description: "Overstocking reduced with usage-based alerts" },
+      { metric: "No-show Rate", value: "-74%", description: "From 28% down to 7% with automated reminders" },
+      { metric: "Booking Time", value: "-60%", description: "Appointments confirmed in under 2 minutes" },
+      { metric: "Revenue Growth", value: "+32%", description: "More bookings and fewer cancellations in 90 days" },
+      { metric: "Inventory Waste", value: "-45%", description: "Less overstock thanks to usage-based alerts" },
     ],
     testimonial: {
       quote:
@@ -33,18 +33,18 @@ export const caseStudies: CaseStudy[] = [
     industry: "Healthcare",
     serviceUsed: "ClinicFlow",
     challenge:
-      "A busy general practice with 80+ daily patients was still running on manual tokens and handwritten prescriptions. Average patient wait time exceeded 45 minutes, and follow-up rates were near zero due to no reminder system.",
+      "A busy general practice seeing 80+ patients a day was still using paper tokens and handwritten prescriptions. Patients waited more than 45 minutes on average, and almost nobody came back for follow-ups because there was no way to remind them.",
     solution:
-      "Deployed ClinicFlow with online booking, digital token queue, electronic prescription module, and automated WhatsApp follow-ups for post-consultation check-ins and report collection.",
+      "We rolled out ClinicFlow with online booking, a digital token queue and electronic prescriptions. Automated WhatsApp messages now handle post-consultation check-ins and remind patients when their reports are ready to collect.",
     results: [
-      { metric: "Wait Time", value: "↓ 55%", description: "Average wait reduced from 45 to 20 minutes" },
-      { metric: "Daily Patients", value: "↑ 40%", description: "Capacity increased without adding staff" },
-      { metric: "Follow-up Rate", value: "↑ 3×", description: "Automated reminders drove patient return visits" },
-      { metric: "Paper Usage", value: "↓ 90%", description: "Near-paperless operations within 30 days" },
+      { metric: "Wait Time", value: "-55%", description: "Average wait cut from 45 to 20 minutes" },
+      { metric: "Daily Patients", value: "+40%", description: "More patients seen without adding staff" },
+      { metric: "Follow-up Rate", value: "3x", description: "Automated reminders brought patients back" },
+      { metric: "Paper Usage", value: "-90%", description: "Almost paperless within 30 days" },
     ],
     testimonial: {
       quote:
-        "ClinicFlow gave us the efficiency of a corporate hospital without the overhead. My patients notice the difference — shorter waits, digital prescriptions, and we actually follow up with them now.",
+        "ClinicFlow gave us the efficiency of a corporate hospital without the overhead. My patients notice the difference: shorter waits, digital prescriptions, and we actually follow up with them now.",
       author: "Dr. Rajesh Choudhary",
       role: "Physician & Owner",
       company: "Dr. Choudhary Family Clinic",
@@ -58,13 +58,13 @@ export const caseStudies: CaseStudy[] = [
     industry: "Logistics & Warehousing",
     serviceUsed: "StockSense",
     challenge:
-      "SwiftLog managed a 15,000 sq.ft. warehouse for a retail FMCG client with over 4,000 SKUs. Stockouts were costing ₹8L/month in missed orders; overstocking tied up working capital; and cycle counts took 3 full days.",
+      "SwiftLog runs a 15,000 sq. ft. warehouse for a retail FMCG client with more than 4,000 SKUs. Stockouts were costing them ₹8L a month in missed orders, overstock was tying up working capital, and every cycle count took 3 full days.",
     solution:
-      "Implemented StockSense with barcode scanning at all receiving and dispatch points, configured demand forecasting for their top 500 SKUs, and automated purchase order triggers for critical reorder levels.",
+      "We implemented StockSense with barcode scanning at every receiving and dispatch point, set up demand forecasting for their top 500 SKUs, and configured purchase orders to raise themselves automatically when critical items hit their reorder level.",
     results: [
-      { metric: "Stockout Incidents", value: "↓ 82%", description: "Demand forecasting prevented critical shortfalls" },
-      { metric: "Cycle Count Time", value: "↓ 66%", description: "3 days reduced to 1 day with barcode scanning" },
-      { metric: "Working Capital", value: "↑ ₹12L freed", description: "Overstock reduced through smart reorder rules" },
+      { metric: "Stockout Incidents", value: "-82%", description: "Forecasting caught shortfalls before they happened" },
+      { metric: "Cycle Count Time", value: "-66%", description: "From 3 days to 1 with barcode scanning" },
+      { metric: "Working Capital", value: "₹12L freed", description: "Less overstock through smarter reorder rules" },
       { metric: "Order Accuracy", value: "99.2%", description: "Up from 94% with real-time pick confirmations" },
     ],
     testimonial: {
@@ -83,18 +83,18 @@ export const caseStudies: CaseStudy[] = [
     industry: "Software Agency",
     serviceUsed: "DevOps Engineering + Cloud Migration",
     challenge:
-      "TechWave, a 40-person software agency, was running client workloads on unmanaged VPS servers with no CI/CD, no monitoring, and manual deployments that took 3–4 hours. Downtime incidents averaged twice a month.",
+      "TechWave, a 40-person software agency, was hosting client workloads on unmanaged VPS servers. There was no CI/CD and no monitoring, every deployment was manual and took 3 to 4 hours, and they were dealing with downtime about twice a month.",
     solution:
-      "Migrated 12 client applications to AWS (ECS + RDS + CloudFront), built GitHub Actions CI/CD pipelines for all repos, set up Terraform for infrastructure management, and deployed Grafana + CloudWatch for full observability.",
+      "We migrated 12 client applications to AWS (ECS, RDS and CloudFront) and built GitHub Actions CI/CD pipelines for every repository. Infrastructure is now managed with Terraform, and Grafana with CloudWatch gives the team full visibility into what's running.",
     results: [
-      { metric: "Deployment Time", value: "↓ 95%", description: "From 4 hours to under 12 minutes per release" },
-      { metric: "Downtime", value: "↓ 91%", description: "2 incidents/month → zero in 4 consecutive months" },
-      { metric: "Infrastructure Cost", value: "↓ 38%", description: "Right-sizing and Reserved Instances on AWS" },
-      { metric: "Developer Velocity", value: "↑ 2.4×", description: "Teams ship features, not deployments" },
+      { metric: "Deployment Time", value: "-95%", description: "From 4 hours to under 12 minutes per release" },
+      { metric: "Downtime", value: "-91%", description: "From 2 incidents a month to zero for 4 months straight" },
+      { metric: "Infrastructure Cost", value: "-38%", description: "Right-sized servers and AWS Reserved Instances" },
+      { metric: "Developer Velocity", value: "2.4x", description: "Developers ship features instead of fighting deployments" },
     ],
     testimonial: {
       quote:
-        "NeurologicX didn't just migrate our infrastructure — they changed how our entire engineering team operates. We went from dreading deployments to pushing 8–10 releases a week without breaking a sweat.",
+        "NeurologicX didn't just migrate our infrastructure, they changed how our entire engineering team operates. We went from dreading deployments to pushing 8-10 releases a week without breaking a sweat.",
       author: "Sameer Joshi",
       role: "CTO",
       company: "TechWave Solutions",

@@ -19,8 +19,8 @@ export default function ServicesOverview() {
             Partner
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed">
-            We embed with tech agencies as a third-party resource — handling cloud migrations and DevOps
-            so your team ships faster without hiring overheads.
+            We work alongside tech agencies as an extra engineering team. We take care of cloud migrations
+            and DevOps so your developers can keep shipping client work, without the cost of new hires.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export default function ServicesOverview() {
                   href={`/services#${service.id}`}
                   className="inline-flex items-center gap-2 text-sm font-semibold text-blue-400 hover:text-blue-300 group-hover:gap-3 transition-all"
                 >
-                  Explore Service <ArrowRight className="w-4 h-4" />
+                  See Details <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             );

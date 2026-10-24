@@ -3,25 +3,25 @@ const STEPS = [
     step: "01",
     title: "Discovery Call",
     description:
-      "We start with a focused conversation to understand your current infrastructure, pain points, and goals. No generic questionnaires — just an engineer talking to your team.",
+      "A short call to understand what you run today, what's causing trouble and where you want to get to. You'll talk to an engineer, not fill in a long form.",
   },
   {
     step: "02",
     title: "Architecture Audit",
     description:
-      "Our team performs a deep assessment of your existing stack, identifies migration risks, maps cloud costs, and designs the target architecture tailored to your workloads.",
+      "We review your current stack, flag migration risks, estimate cloud costs and design a target setup that fits your workloads.",
   },
   {
     step: "03",
-    title: "Build & Execute",
+    title: "Build and Migrate",
     description:
-      "We execute the migration or DevOps buildout with a zero-downtime strategy. Every step is documented, tested, and reviewed before cutover — no surprises on go-live day.",
+      "We carry out the migration or DevOps work with a zero-downtime plan. Every step is documented and tested before cutover, so go-live day is uneventful.",
   },
   {
     step: "04",
     title: "Monitor & Support",
     description:
-      "Post-launch, we set up full observability — dashboards, alerts, and on-call response. SLA-backed support ensures your infrastructure stays healthy long after handover.",
+      "After launch we set up dashboards, alerts and on-call cover, and keep your infrastructure healthy long after handover.",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function EngagementProcess() {
             </span>
           </h2>
           <p className="text-slate-300 leading-relaxed">
-            A repeatable process that de-risks migrations and DevOps modernizations at every stage.
+            A simple, repeatable process that keeps risk low at every stage of a migration or DevOps project.
           </p>
         </div>
 

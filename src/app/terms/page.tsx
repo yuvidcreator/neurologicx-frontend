@@ -4,8 +4,8 @@ import Footer from "@/components/Common/Footer";
 import { COMPANY } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | NeurologicX",
-  description: "Terms and Conditions for NeurologicX Innovations Labs — governing use of our website and services.",
+  title: "Terms & Conditions",
+  description: "The terms that govern your use of the NeurologicX Innovations Labs website and services.",
 };
 
 const LAST_UPDATED = "June 2026";
@@ -59,7 +59,7 @@ export default function TermsPage() {
               {
                 heading: "4. Intellectual Property",
                 content: [
-                  "All content on this website — including text, graphics, logos, product names (SalonIQ, ClinicFlow, StockSense), and code — is the intellectual property of NeurologicX Innovations Labs.",
+                  "All content on this website, including text, graphics, logos, product names (SalonIQ, ClinicFlow, StockSense) and code, is the intellectual property of NeurologicX Innovations Labs.",
                   "You may not reproduce, distribute, or use our content for commercial purposes without written permission.",
                   "Our SaaS products are licensed, not sold. Licensing terms are detailed in individual subscription agreements.",
                 ],

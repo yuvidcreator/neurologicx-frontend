@@ -43,7 +43,7 @@ export default function CaseStudiesGrid() {
                     {study.testimonial.quote}
                   </p>
                   <p className="text-xs text-slate-500 mt-2 font-medium">
-                    — {study.testimonial.author}, {study.testimonial.role}
+                    {study.testimonial.author}, {study.testimonial.role}
                   </p>
                 </div>
               )}

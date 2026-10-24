@@ -10,20 +10,20 @@ export default function CTABanner() {
       <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[300px] bg-violet-600/12 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p className="text-sm uppercase tracking-widest text-blue-400 font-medium mb-6">Get Started Today</p>
+        <p className="text-sm uppercase tracking-widest text-blue-400 font-medium mb-6">Let&apos;s Talk</p>
 
         <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-          Ready to Transform Your Business{" "}
-          <br className="hidden md:block" />
-          with{" "}
+          Ready to Put{" "}
           <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
-            AI & Automation?
+            AI to Work
           </span>
+          <br className="hidden md:block" />
+          {" "}in Your Business?
         </h2>
 
         <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Whether you need a vertical SaaS product or a DevOps team to modernize your infrastructure —
-          we&apos;re ready to scope your project.
+          Tell us what&apos;s slowing your team down. Whether it&apos;s a product demo or a cloud project,
+          we&apos;ll reply within one business day with a clear next step.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
@@ -44,7 +44,7 @@ export default function CTABanner() {
         </div>
 
         <p className="text-xs text-slate-600">
-          {COMPANY.legalName} &middot; {COMPANY.location}
+          {COMPANY.legalName}, {COMPANY.location}
         </p>
       </div>
     </section>

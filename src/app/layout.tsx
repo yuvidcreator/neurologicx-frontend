@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.neurologicx.com"),
   title: {
-    default: "NeurologicX — AI-Powered SaaS & Cloud Engineering",
+    default: "NeurologicX | AI Software and Cloud Engineering",
     template: "%s | NeurologicX",
   },
   description:
-    "NeurologicX Innovations Labs builds AI-powered SaaS for salons, clinics, and warehouses — and provides cloud migration & DevOps services for tech agencies across India.",
+    "NeurologicX builds AI-powered software for salons, clinics and warehouses, and provides cloud migration and DevOps engineering for tech agencies. Based in Pune and Solapur, India.",
   keywords: [
     "AI SaaS India",
     "cloud migration AWS Azure GCP",
@@ -39,17 +39,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "NeurologicX",
-    title: "NeurologicX — AI-Powered SaaS & Cloud Engineering",
+    title: "NeurologicX | AI Software and Cloud Engineering",
     description:
-      "AI-powered SaaS products for salons, clinics & warehouses. Cloud migration & DevOps for tech agencies. Based in Pune, India.",
+      "AI-powered software for salons, clinics and warehouses, plus cloud migration and DevOps for tech agencies. Based in Pune, India.",
     url: "https://www.neurologicx.com",
     locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
-    title: "NeurologicX — AI-Powered SaaS & Cloud Engineering",
+    title: "NeurologicX | AI Software and Cloud Engineering",
     description:
-      "AI-powered SaaS products for salons, clinics & warehouses. Cloud migration & DevOps for tech agencies.",
+      "AI-powered software for salons, clinics and warehouses, plus cloud migration and DevOps for tech agencies.",
   },
 };
 

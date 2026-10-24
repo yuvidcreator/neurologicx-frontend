@@ -4,8 +4,8 @@ import Footer from "@/components/Common/Footer";
 import { COMPANY } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | NeurologicX",
-  description: "Privacy Policy for NeurologicX Innovations Labs — how we collect, use, and protect your personal information.",
+  title: "Privacy Policy",
+  description: "How NeurologicX Innovations Labs collects, uses and protects your personal information.",
 };
 
 const LAST_UPDATED = "June 2026";

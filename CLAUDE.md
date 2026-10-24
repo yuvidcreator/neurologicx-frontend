@@ -12,9 +12,9 @@ Senior Full Stack Developer. Build production-quality, static marketing pages fo
 | Public brand | NeurologicX |
 | What | AI-powered SaaS products + third-party cloud & DevOps for agencies |
 | Portfolio | Software & IoT projects under the parent company |
-| Where | Pune / Solapur, Maharashtra, India |
+| Where | Pune and Solapur, Maharashtra, India |
 | Domain | www.neurologicx.com |
-| Tagline | "Get your Business To Next Level with A.I. & Automation." |
+| Tagline | "Take your business to the next level with AI and automation." |
 | B2B targets | Tech agencies (cloud/DevOps) + businesses adopting vertical SaaS |
 | Revenue | SaaS subscriptions + agency service partnerships |
 | Deploy | Vercel — static, long-lived marketing site |
@@ -46,8 +46,8 @@ Senior Full Stack Developer. Build production-quality, static marketing pages fo
 ## Tech Stack
 | Layer | Tool | Version |
 |---|---|---|
-| Framework | Next.js App Router | 15.3.9 |
-| UI | React + TypeScript | 19 / 5 |
+| Framework | Next.js App Router (Turbopack) | 16.4.3 |
+| UI | React + TypeScript | 19.3 / 5 |
 | Styling | Tailwind CSS v4 | PostCSS plugin |
 | Icons | Lucide React | 0.545.0 |
 | Font | Geist Sans + Mono | loaded in layout.tsx |
@@ -207,7 +207,7 @@ className="text-sm uppercase tracking-widest text-blue-400 font-medium"   // Eye
 - **Check `package.json`** before suggesting a new dep
 - **Don't invent data** — use only confirmed facts from this file or the codebase
 - **Icon names** — verify Lucide React exports before using (`Sparkles`, `Stethoscope`, `Warehouse`, `Cloud`, `GitBranch` confirmed)
-- **Params in Next.js 15** — `params` is a `Promise`, must be `await`ed in page components
+- **Params in Next.js 15+** — `params` is a `Promise`, must be `await`ed in page components
 
 ---
 

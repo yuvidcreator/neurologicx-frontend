@@ -7,49 +7,49 @@ import CTABanner from "@/components/Home/CTABanner";
 import { COMPANY } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "About | NeurologicX Innovations Labs",
+  title: "About Us",
   description:
-    "Learn about NeurologicX Innovations Labs — an AI & automation company from Pune building vertical SaaS products and cloud engineering services for tech agencies.",
+    "NeurologicX Innovations Labs is an AI and automation company from Pune, building industry-specific SaaS products and cloud engineering services for tech agencies.",
 };
 
 const VALUES = [
   {
     Icon: Cpu,
     title: "AI-First Thinking",
-    description: "We don't retrofit AI onto existing workflows — we design processes with intelligence built in from the start.",
+    description: "We don't bolt AI onto old processes. We design the workflow around it from the start.",
   },
   {
     Icon: Target,
-    title: "Outcome Obsessed",
-    description: "Every engagement is measured by real business outcomes — reduced costs, faster operations, revenue growth.",
+    title: "Focused on Outcomes",
+    description: "We judge our work by what changes for you: lower costs, faster operations and more revenue.",
   },
   {
     Icon: Users,
     title: "Team Over Ego",
-    description: "We embed as part of your team. Your success is our success — no silos, no client conflicts.",
+    description: "We work as part of your team. When you do well, we do well. No silos and no conflicts with your clients.",
   },
   {
     Icon: Heart,
     title: "Built with Care",
-    description: "We take pride in clean code, reliable infrastructure, and software that people actually enjoy using.",
+    description: "We care about clean code, reliable infrastructure and software that people actually like using.",
   },
   {
     Icon: Globe,
     title: "Local Roots, Global Standards",
-    description: "Based in India, built to enterprise-grade international standards. We bring the best of both worlds.",
+    description: "We're based in India and hold our work to the same standard as the best teams anywhere.",
   },
   {
     Icon: Eye,
-    title: "Radical Transparency",
-    description: "No hidden costs, no scope creep surprises. We communicate early, clearly, and often.",
+    title: "Clear Communication",
+    description: "No hidden costs and no surprise scope changes. We tell you things early, plainly and often.",
   },
 ];
 
 const WHAT_WE_BUILD = [
-  { label: "AI-Powered SaaS", desc: "Vertical software platforms for beauty, healthcare, and logistics" },
-  { label: "Cloud Migrations", desc: "Zero-downtime moves to AWS, Azure & GCP" },
-  { label: "DevOps Engineering", desc: "CI/CD, Kubernetes, Terraform, and observability stacks" },
-  { label: "IoT Solutions", desc: "Hardware-to-cloud IoT pipelines for industrial and consumer applications" },
+  { label: "AI-Powered SaaS", desc: "Industry software for beauty, healthcare and logistics" },
+  { label: "Cloud Migrations", desc: "Carefully planned moves to AWS, Azure and GCP" },
+  { label: "DevOps Engineering", desc: "CI/CD, Kubernetes, Terraform and monitoring" },
+  { label: "IoT Solutions", desc: "Connecting devices and sensors to the cloud for industrial and consumer products" },
 ];
 
 export default function AboutPage() {
@@ -60,30 +60,29 @@ export default function AboutPage() {
         eyebrow="About Us"
         title="We Are"
         accent="NeurologicX Innovations Labs"
-        description="An AI & automation company from Pune building products that make businesses smarter — and partnerships that make agencies stronger."
+        description="An AI and automation company from Pune. We build software that helps businesses run smoothly, and we take on the cloud work tech agencies don't have time for."
       />
 
-      {/* Story */}
       <section className="py-20 md:py-28 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-sm uppercase tracking-widest text-blue-400 font-medium mb-5">Our Story</p>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
-                Built from a frustration with how businesses were being left behind
+                We started because good software wasn&apos;t reaching the businesses that needed it most
               </h2>
               <div className="space-y-4 text-slate-300 leading-relaxed">
                 <p>
-                  NeurologicX Innovations Labs was founded in 2025 by a group of engineers in Pune who kept seeing the same problem: small and medium businesses in India had access to powerful AI tools, but no practical way to put them to work.
+                  NeurologicX Innovations Labs was founded in 2025 by a group of engineers in Pune who kept running into the same problem. Small and medium businesses in India had heard plenty about AI, but had no practical way to use it in their day-to-day work.
                 </p>
                 <p>
-                  Salon owners were managing appointments on WhatsApp. Clinics were running on paper tokens. Warehouses were tracking 5,000 SKUs on spreadsheets. Not because they didn&apos;t want better tools — but because the software that existed was either too expensive, too complex, or built for someone else&apos;s market entirely.
+                  Salon owners were managing appointments on WhatsApp. Clinics were running on paper tokens. Warehouses were tracking 5,000 SKUs in spreadsheets. It wasn&apos;t that they didn&apos;t want better tools. The software out there was too expensive, too complicated, or built for a different market.
                 </p>
                 <p>
-                  At the same time, we were watching tech agencies struggle with a different version of the same story: they needed cloud and DevOps expertise, but couldn&apos;t afford to hire senior infrastructure engineers full-time.
+                  Around the same time, we saw tech agencies dealing with their own version of the problem. They needed cloud and DevOps skills, but couldn&apos;t justify hiring senior infrastructure engineers full-time.
                 </p>
                 <p>
-                  That&apos;s why we built two things at once: vertical SaaS products designed for India&apos;s specific business needs, and a services arm that plugs into agencies as a dedicated engineering team. One company solving both problems — because they have the same root.
+                  So we decided to take on both. We build SaaS products around the way Indian businesses actually work, and we run a services team that plugs into agencies as their own engineering department. Two sides of one company, solving the same underlying problem.
                 </p>
               </div>
             </div>
@@ -103,7 +102,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission & Vision */}
       <section className="py-16 bg-slate-900 border-y border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -115,7 +113,7 @@ export default function AboutPage() {
                 <h2 className="text-lg font-bold text-white">Our Mission</h2>
               </div>
               <p className="text-slate-300 leading-relaxed">
-                To make AI and automation accessible to every business vertical in India — through purpose-built SaaS products and world-class engineering services that deliver measurable results.
+                To make AI and automation practical for every kind of business in India, through software built for their industry and engineering work with results you can measure.
               </p>
             </div>
             <div className="p-8 bg-violet-500/5 border border-violet-500/20 rounded-2xl">
@@ -126,14 +124,13 @@ export default function AboutPage() {
                 <h2 className="text-lg font-bold text-white">Our Vision</h2>
               </div>
               <p className="text-slate-300 leading-relaxed">
-                To become the most trusted AI infrastructure company for Indian tech agencies — and the SaaS platform of choice for business owners who want technology that actually works for them.
+                To be the engineering partner Indian tech agencies trust first, and the software business owners choose because it simply works for them.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values */}
       <section className="py-20 md:py-28 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
@@ -154,7 +151,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Company details strip */}
       <section className="py-10 bg-slate-900 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left">
           <div>

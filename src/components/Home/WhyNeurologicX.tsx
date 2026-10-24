@@ -3,39 +3,39 @@ import { Cpu, Shield, TrendingUp, Users, Clock, Headphones } from "lucide-react"
 const WHY_POINTS = [
   {
     Icon: Cpu,
-    title: "AI-First Architecture",
+    title: "AI Built In",
     description:
-      "Every product and service is designed with AI at its core — not bolted on as an afterthought.",
+      "AI isn't an add-on in our products. Forecasting, smart scheduling and automated reminders are part of how they work from day one.",
   },
   {
     Icon: TrendingUp,
-    title: "Proven ROI",
+    title: "Results You Can Measure",
     description:
-      "Our case studies show measurable outcomes: reduced costs, faster operations, and real revenue growth.",
+      "Our case studies show the numbers: fewer no-shows, shorter waiting times, faster deployments and lower cloud bills.",
   },
   {
     Icon: Shield,
-    title: "Enterprise-Grade Security",
+    title: "Security by Default",
     description:
-      "SOC2-aligned practices, encrypted data pipelines, and cloud security hardening on every engagement.",
+      "Data is encrypted, access is role-based, and every cloud setup we hand over is hardened before it goes live.",
   },
   {
     Icon: Users,
-    title: "Agency-Friendly Model",
+    title: "Agency Friendly",
     description:
-      "White-label ready. We work as an extension of your team — no client conflicts, full confidentiality.",
+      "We can work under your brand as part of your team. Your clients stay your clients, and everything stays confidential.",
   },
   {
     Icon: Clock,
-    title: "Rapid Deployment",
+    title: "Quick to Get Started",
     description:
-      "From onboarding to go-live in days, not months. Our battle-tested playbooks cut wasted cycles.",
+      "Onboarding to go-live takes days, not months. We've done this setup many times, so there's very little guesswork.",
   },
   {
     Icon: Headphones,
-    title: "Ongoing Support",
+    title: "We Stay After Launch",
     description:
-      "Post-launch monitoring, SLA-backed incident response, and continuous improvement — we don't disappear after delivery.",
+      "Monitoring, incident response and regular improvements carry on after handover. We don't disappear once the project is delivered.",
   },
 ];
 
@@ -45,16 +45,16 @@ export default function WhyNeurologicX() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-sm uppercase tracking-widest text-blue-400 font-medium mb-4">Why Choose Us</p>
+          <p className="text-sm uppercase tracking-widest text-blue-400 font-medium mb-4">Why NeurologicX</p>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Built for Teams That{" "}
+            Software and Engineering{" "}
             <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
-              Can&apos;t Afford to Fail
+              You Can Rely On
             </span>
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed">
-            Whether you run a busy clinic or lead a 40-person agency — we&apos;ve solved your problem before,
-            and we have a repeatable system for it.
+            Whether you run a busy clinic or a growing software agency, chances are we&apos;ve solved your
+            problem before. Every project gets the same tested process.
           </p>
         </div>
 

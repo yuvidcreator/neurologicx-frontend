@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const study = caseStudies.find((cs) => cs.slug === slug);
   if (!study) return {};
   return {
-    title: `${study.client} | Case Study — NeurologicX`,
+    title: `${study.client} Case Study`,
     description: study.challenge.slice(0, 155),
   };
 }
@@ -34,7 +34,6 @@ export default async function CaseStudyDetailPage({ params }: Props) {
     <main className="bg-slate-950 text-white antialiased">
       <Navbar />
 
-      {/* Hero */}
       <section className="relative pt-36 pb-16 bg-slate-950 overflow-hidden">
         <div className="absolute -top-20 left-1/3 w-[500px] h-[500px] bg-blue-700/10 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,7 +57,6 @@ export default async function CaseStudyDetailPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Results bar */}
       <section className="py-10 bg-slate-900 border-y border-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
@@ -76,7 +74,6 @@ export default async function CaseStudyDetailPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Solution */}
       <section className="py-16 md:py-24 bg-slate-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -103,7 +100,6 @@ export default async function CaseStudyDetailPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Testimonial */}
       {study.testimonial && (
         <section className="py-16 bg-slate-900">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

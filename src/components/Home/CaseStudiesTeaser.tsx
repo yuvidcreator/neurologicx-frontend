@@ -18,7 +18,7 @@ export default function CaseStudiesTeaser() {
             </span>
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed">
-            Don&apos;t take our word for it — see exactly what our clients achieved with numbers that matter.
+            Here&apos;s what changed for some of the businesses we work with, in their own numbers.
           </p>
         </div>
 

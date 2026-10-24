@@ -7,9 +7,9 @@ import EngagementProcess from "@/components/Services/EngagementProcess";
 import CTABanner from "@/components/Home/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Services | NeurologicX — Cloud Migration & DevOps Engineering",
+  title: "Cloud Migration and DevOps Services",
   description:
-    "NeurologicX provides AWS, Azure & GCP cloud infrastructure migrations and end-to-end DevOps engineering for tech agencies and enterprises.",
+    "Cloud migrations to AWS, Azure and GCP, plus hands-on DevOps engineering for tech agencies and growing businesses.",
 };
 
 export default function ServicesPage() {
@@ -20,7 +20,7 @@ export default function ServicesPage() {
         eyebrow="Agency Services"
         title="Your Cloud &"
         accent="DevOps Partner"
-        description="We embed with tech agencies as a dedicated engineering resource — handling migrations and DevOps so your team stays focused on shipping product."
+        description="We work as an extension of your engineering team, taking care of migrations and DevOps so your developers can stay focused on the product."
       />
       <ServicesDetail />
       <EngagementProcess />

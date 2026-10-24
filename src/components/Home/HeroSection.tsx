@@ -28,20 +28,19 @@ export default function HeroSection() {
         </div>
 
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
-          Build Smarter.{" "}
+          Less Busywork.{" "}
+          <br className="hidden sm:block" />
           <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent">
-            Scale Faster.
+            More Business.
           </span>
-          <br />
-          Automate Everything.
         </h1>
 
         <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-4 leading-relaxed">
-          AI-powered SaaS products for salons, clinics, and warehouses —
-          plus cloud & DevOps engineering for tech agencies.
+          AI-powered software for salons, clinics and warehouses, plus cloud and DevOps
+          engineering for tech agencies.
         </p>
         <p className="text-sm md:text-base text-slate-500 max-w-lg mx-auto mb-12">
-          Trusted by 15+ agency partners and growing businesses across India.
+          Built in Pune and Solapur for businesses that have outgrown spreadsheets and WhatsApp.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
@@ -61,7 +60,7 @@ export default function HeroSection() {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-3">
-          <span className="text-xs text-slate-600 uppercase tracking-widest font-medium">Powered by</span>
+          <span className="text-xs text-slate-600 uppercase tracking-widest font-medium">We work with</span>
           {["AWS", "Azure", "GCP", "Kubernetes", "Terraform"].map((tech) => (
             <span
               key={tech}

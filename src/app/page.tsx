@@ -10,9 +10,9 @@ import CaseStudiesTeaser from "@/components/Home/CaseStudiesTeaser";
 import CTABanner from "@/components/Home/CTABanner";
 
 export const metadata: Metadata = {
-  title: "NeurologicX — AI-Powered SaaS & Cloud Engineering",
+  title: { absolute: "NeurologicX | AI Software and Cloud Engineering" },
   description:
-    "NeurologicX Innovations Labs builds AI-powered SaaS for salons, clinics, and warehouses — and provides cloud migration & DevOps services for tech agencies across India.",
+    "NeurologicX builds AI-powered software for salons, clinics and warehouses, and provides cloud migration and DevOps engineering for tech agencies. Based in Pune and Solapur, India.",
 };
 
 export default function HomePage() {

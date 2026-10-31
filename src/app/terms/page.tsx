@@ -6,6 +6,8 @@ import { COMPANY } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Terms & Conditions",
   description: "The terms that govern your use of the NeurologicX Innovations Labs website and services.",
+  keywords: ["NeurologicX terms and conditions", "NeurologicX Innovations Labs", "terms of service", "software services agreement"],
+  alternates: { canonical: "/terms/" },
 };
 
 const LAST_UPDATED = "June 2026";
@@ -111,7 +113,7 @@ export default function TermsPage() {
                 heading: "11. Contact",
                 content: [
                   `For questions about these Terms, contact us at: <strong class="text-white">${COMPANY.email}</strong>`,
-                  `${COMPANY.legalName}, ${COMPANY.location}`,
+                  `${COMPANY.legalName}, ${COMPANY.fullAddress}. Phone: ${COMPANY.phone}`,
                 ],
               },
             ].map(({ heading, content }) => (

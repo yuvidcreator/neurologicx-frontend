@@ -23,30 +23,10 @@ export interface Service {
   providers?: string[];
 }
 
-export interface CaseStudy {
-  id: string;
-  slug: string;
-  client: string;
+export interface Client {
+  name: string;
   industry: string;
-  serviceUsed: string;
-  challenge: string;
-  solution: string;
-  results: CaseStudyResult[];
-  testimonial?: Testimonial;
-  tags: string[];
-}
-
-export interface CaseStudyResult {
-  metric: string;
-  value: string;
-  description: string;
-}
-
-export interface Testimonial {
-  quote: string;
-  author: string;
-  role: string;
-  company: string;
+  location: string;
 }
 
 export interface NavLink {

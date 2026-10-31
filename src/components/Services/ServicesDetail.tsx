@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Cloud, GitBranch, CheckCircle2, ArrowRight } from "lucide-react";
+import { BrainCircuit, LayoutDashboard, ShoppingCart, Database, Cloud, GitBranch, CheckCircle2, ArrowRight } from "lucide-react";
 import { services } from "@/lib/services";
 
-const SERVICE_ICONS = { Cloud, GitBranch };
+const SERVICE_ICONS = { BrainCircuit, LayoutDashboard, ShoppingCart, Database, Cloud, GitBranch };
 
 export default function ServicesDetail() {
   return (

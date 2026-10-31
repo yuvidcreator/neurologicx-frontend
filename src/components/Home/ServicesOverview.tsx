@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Cloud, GitBranch, ArrowRight, CheckCircle2 } from "lucide-react";
+import { BrainCircuit, LayoutDashboard, ShoppingCart, Database, Cloud, GitBranch, ArrowRight, CheckCircle2 } from "lucide-react";
 import { services } from "@/lib/services";
 
-const SERVICE_ICONS = { Cloud, GitBranch };
+const SERVICE_ICONS = { BrainCircuit, LayoutDashboard, ShoppingCart, Database, Cloud, GitBranch };
 
 export default function ServicesOverview() {
   return (
@@ -10,7 +10,7 @@ export default function ServicesOverview() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-sm uppercase tracking-widest text-blue-400 font-medium mb-4">Agency Services</p>
+          <p className="text-sm uppercase tracking-widest text-blue-400 font-medium mb-4">Services</p>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Your{" "}
             <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
@@ -19,12 +19,12 @@ export default function ServicesOverview() {
             Partner
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed">
-            We work alongside tech agencies as an extra engineering team. We take care of cloud migrations
-            and DevOps so your developers can keep shipping client work, without the cost of new hires.
+            From AI-powered software, web portals and online stores to data pipelines, cloud migrations
+            and DevOps, one team in Solapur and Pune builds and runs it for you.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {services.map((service) => {
             const Icon = SERVICE_ICONS[service.iconName as keyof typeof SERVICE_ICONS] ?? Cloud;
             return (
@@ -50,10 +50,10 @@ export default function ServicesOverview() {
                 )}
 
                 <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6">{service.description}</p>
+                <p className="text-slate-400 text-sm leading-relaxed mb-6">{service.tagline}</p>
 
                 <ul className="space-y-2.5 mb-8 flex-1">
-                  {service.capabilities.slice(0, 4).map((cap) => (
+                  {service.capabilities.slice(0, 3).map((cap) => (
                     <li key={cap} className="flex items-start gap-2.5 text-sm text-slate-300">
                       <CheckCircle2 className="w-4 h-4 mt-0.5 shrink-0 text-blue-400" />
                       {cap}
@@ -62,7 +62,7 @@ export default function ServicesOverview() {
                 </ul>
 
                 <Link
-                  href={`/services#${service.id}`}
+                  href={`/services/#${service.id}`}
                   className="inline-flex items-center gap-2 text-sm font-semibold text-blue-400 hover:text-blue-300 group-hover:gap-3 transition-all"
                 >
                   See Details <ArrowRight className="w-4 h-4" />

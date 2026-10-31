@@ -6,6 +6,8 @@ import { COMPANY } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "How NeurologicX Innovations Labs collects, uses and protects your personal information.",
+  keywords: ["NeurologicX privacy policy", "NeurologicX Innovations Labs", "data protection", "personal information"],
+  alternates: { canonical: "/privacy-policy/" },
 };
 
 const LAST_UPDATED = "June 2026";
@@ -86,6 +88,7 @@ export default function PrivacyPolicyPage() {
                 heading: "7. Third-Party Links",
                 content: [
                   "Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of those sites.",
+                  "Our contact page shows an embedded Google Maps view. It is loaded from Google and is covered by Google's own privacy policy.",
                 ],
               },
               {
@@ -99,7 +102,7 @@ export default function PrivacyPolicyPage() {
                 heading: "9. Contact Us",
                 content: [
                   `For any privacy-related questions, contact us at: <strong class="text-white">${COMPANY.email}</strong>`,
-                  `${COMPANY.legalName}, ${COMPANY.location}`,
+                  `${COMPANY.legalName}, ${COMPANY.fullAddress}. Phone: ${COMPANY.phone}`,
                 ],
               },
             ].map(({ heading, content }) => (

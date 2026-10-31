@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import JsonLd from "@/components/Common/JsonLd";
+import { siteSchema } from "@/lib/schema";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,15 +21,20 @@ export const metadata: Metadata = {
     template: "%s | NeurologicX",
   },
   description:
-    "NeurologicX builds AI-powered software for salons, clinics and warehouses, and provides cloud migration and DevOps engineering for tech agencies. Based in Pune and Solapur, India.",
+    "NeurologicX Innovations Labs builds AI-powered software, web portals and e-commerce stores, and provides data engineering, DevOps and AWS, Azure and GCP cloud migration. Based in Solapur and Pune, India.",
   keywords: [
-    "AI SaaS India",
-    "cloud migration AWS Azure GCP",
-    "DevOps engineering",
-    "salon management software",
-    "clinic appointment software",
-    "warehouse inventory management",
     "NeurologicX",
+    "NeurologicX Innovations Labs",
+    "AI powered software solutions",
+    "AI software development company",
+    "web portal development",
+    "e-commerce website development",
+    "data engineering services",
+    "DevOps services",
+    "cloud migration services",
+    "AWS Azure GCP migration",
+    "software company in Solapur",
+    "software development company in Pune",
   ],
   authors: [{ name: "NeurologicX Innovations Labs" }],
   creator: "NeurologicX Innovations Labs",
@@ -41,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "NeurologicX",
     title: "NeurologicX | AI Software and Cloud Engineering",
     description:
-      "AI-powered software for salons, clinics and warehouses, plus cloud migration and DevOps for tech agencies. Based in Pune, India.",
+      "AI-powered software, web portals, e-commerce, data engineering, DevOps and cloud migration. Based in Solapur and Pune, India.",
     url: "https://www.neurologicx.com",
     locale: "en_IN",
   },
@@ -49,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "NeurologicX | AI Software and Cloud Engineering",
     description:
-      "AI-powered software for salons, clinics and warehouses, plus cloud migration and DevOps for tech agencies.",
+      "AI-powered software, web portals, e-commerce, data engineering, DevOps and cloud migration from Solapur and Pune, India.",
   },
 };
 
@@ -61,6 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <JsonLd data={siteSchema} />
         {children}
       </body>
     </html>

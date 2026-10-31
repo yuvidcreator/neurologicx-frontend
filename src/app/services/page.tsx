@@ -7,9 +7,28 @@ import EngagementProcess from "@/components/Services/EngagementProcess";
 import CTABanner from "@/components/Home/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Cloud Migration and DevOps Services",
+  title: "AI Software, Portal, E-commerce, Data and Cloud Services",
   description:
-    "Cloud migrations to AWS, Azure and GCP, plus hands-on DevOps engineering for tech agencies and growing businesses.",
+    "AI-powered software development, web portals, e-commerce stores, data engineering, DevOps and cloud migration to AWS, Azure and GCP. Solapur and Pune.",
+  keywords: [
+    "AI software development services",
+    "AI powered software solutions",
+    "custom software development company",
+    "web portal development company",
+    "customer portal development",
+    "e-commerce website development",
+    "Shopify and WooCommerce development",
+    "data engineering services",
+    "ETL pipeline development",
+    "DevOps services",
+    "CI/CD and Kubernetes consulting",
+    "cloud migration services",
+    "AWS migration services",
+    "Azure migration services",
+    "Google Cloud migration services",
+    "software company in Solapur",
+  ],
+  alternates: { canonical: "/services/" },
 };
 
 export default function ServicesPage() {
@@ -17,10 +36,10 @@ export default function ServicesPage() {
     <main className="bg-slate-950 text-white antialiased">
       <Navbar />
       <PageHero
-        eyebrow="Agency Services"
-        title="Your Cloud &"
-        accent="DevOps Partner"
-        description="We work as an extension of your engineering team, taking care of migrations and DevOps so your developers can stay focused on the product."
+        eyebrow="Services"
+        title="Software, Data &"
+        accent="Cloud Engineering"
+        description="AI-powered software, web portals, online stores, data pipelines, cloud migrations and DevOps, built and run by one team in Solapur and Pune."
       />
       <ServicesDetail />
       <EngagementProcess />

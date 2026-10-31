@@ -6,13 +6,28 @@ import StatsBar from "@/components/Home/StatsBar";
 import ProductsTeaser from "@/components/Home/ProductsTeaser";
 import ServicesOverview from "@/components/Home/ServicesOverview";
 import WhyNeurologicX from "@/components/Home/WhyNeurologicX";
-import CaseStudiesTeaser from "@/components/Home/CaseStudiesTeaser";
+import ClientsSection from "@/components/Home/ClientsSection";
 import CTABanner from "@/components/Home/CTABanner";
 
 export const metadata: Metadata = {
   title: { absolute: "NeurologicX | AI Software and Cloud Engineering" },
   description:
-    "NeurologicX builds AI-powered software for salons, clinics and warehouses, and provides cloud migration and DevOps engineering for tech agencies. Based in Pune and Solapur, India.",
+    "AI-powered software, web portals, e-commerce stores, data engineering, DevOps and AWS, Azure and GCP cloud migration from NeurologicX, Solapur and Pune.",
+  keywords: [
+    "NeurologicX",
+    "NeurologicX Innovations Labs",
+    "AI powered software solutions",
+    "AI software development company in Solapur",
+    "software company in Solapur",
+    "software development company in Pune",
+    "custom software development",
+    "web portal development",
+    "e-commerce website development",
+    "data engineering services",
+    "DevOps services",
+    "cloud migration services AWS Azure GCP",
+  ],
+  alternates: { canonical: "/" },
 };
 
 export default function HomePage() {
@@ -24,7 +39,7 @@ export default function HomePage() {
       <ProductsTeaser />
       <ServicesOverview />
       <WhyNeurologicX />
-      <CaseStudiesTeaser />
+      <ClientsSection />
       <CTABanner />
       <Footer />
     </main>

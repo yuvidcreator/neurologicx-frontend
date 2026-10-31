@@ -9,6 +9,21 @@ export const metadata: Metadata = {
   title: "Products: SalonIQ, ClinicFlow and StockSense",
   description:
     "AI-powered software from NeurologicX: SalonIQ for salons and spas, ClinicFlow for clinics, and StockSense for warehouses and inventory.",
+  keywords: [
+    "AI powered software solutions",
+    "AI SaaS products India",
+    "salon management software",
+    "salon booking software Pune",
+    "clinic management software",
+    "clinic appointment software",
+    "inventory management software",
+    "warehouse management software",
+    "SalonIQ",
+    "ClinicFlow",
+    "StockSense",
+    "NeurologicX",
+  ],
+  alternates: { canonical: "/products/" },
 };
 
 export default function ProductsPage() {

@@ -4,6 +4,13 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   poweredByHeader: false,
 
+  async redirects() {
+    return [
+      { source: "/case-studies/", destination: "/about/#clients", permanent: true },
+      { source: "/case-studies/:slug/", destination: "/about/#clients", permanent: true },
+    ];
+  },
+
   async headers() {
     return [
       {

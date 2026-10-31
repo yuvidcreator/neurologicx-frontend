@@ -4,12 +4,24 @@ import Navbar from "@/components/Common/Navbar";
 import Footer from "@/components/Common/Footer";
 import PageHero from "@/components/Common/PageHero";
 import CTABanner from "@/components/Home/CTABanner";
+import ClientsSection from "@/components/Home/ClientsSection";
 import { COMPANY } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "NeurologicX Innovations Labs is an AI and automation company from Pune, building industry-specific SaaS products and cloud engineering services for tech agencies.",
+    "NeurologicX Innovations Labs is an AI and software company in Solapur and Pune building AI-powered software, portals, e-commerce, data and cloud solutions.",
+  keywords: [
+    "about NeurologicX",
+    "NeurologicX Innovations Labs",
+    "software company in Solapur",
+    "IT company in Solapur",
+    "AI company in Pune",
+    "software development company in Pune",
+    "AI powered software solutions",
+    "cloud and DevOps company India",
+  ],
+  alternates: { canonical: "/about/" },
 };
 
 const VALUES = [
@@ -46,7 +58,9 @@ const VALUES = [
 ];
 
 const WHAT_WE_BUILD = [
-  { label: "AI-Powered SaaS", desc: "Industry software for beauty, healthcare and logistics" },
+  { label: "AI-Powered Software", desc: "Custom apps and SaaS for beauty, healthcare and logistics" },
+  { label: "Portals and E-commerce", desc: "Customer portals, admin dashboards and online stores" },
+  { label: "Data Engineering", desc: "Pipelines, data warehouses and self-updating reports" },
   { label: "Cloud Migrations", desc: "Carefully planned moves to AWS, Azure and GCP" },
   { label: "DevOps Engineering", desc: "CI/CD, Kubernetes, Terraform and monitoring" },
   { label: "IoT Solutions", desc: "Connecting devices and sensors to the cloud for industrial and consumer products" },
@@ -60,7 +74,7 @@ export default function AboutPage() {
         eyebrow="About Us"
         title="We Are"
         accent="NeurologicX Innovations Labs"
-        description="An AI and automation company from Pune. We build software that helps businesses run smoothly, and we take on the cloud work tech agencies don't have time for."
+        description="An AI and automation company from Solapur and Pune. We build software that helps businesses run smoothly, and we take on the cloud work tech agencies don't have time for."
       />
 
       <section className="py-20 md:py-28 bg-slate-950">
@@ -151,7 +165,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-10 bg-slate-900 border-t border-slate-800">
+      <ClientsSection />
+
+      <section className="py-10 bg-slate-950 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left">
           <div>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-1">Legal Entity</p>
@@ -159,8 +175,8 @@ export default function AboutPage() {
           </div>
           <div className="w-px h-8 bg-slate-700 hidden md:block" />
           <div>
-            <p className="text-xs text-slate-500 uppercase tracking-widest mb-1">Locations</p>
-            <p className="text-sm font-semibold text-white">{COMPANY.location}</p>
+            <p className="text-xs text-slate-500 uppercase tracking-widest mb-1">Office</p>
+            <p className="text-sm font-semibold text-white max-w-sm">{COMPANY.fullAddress}</p>
           </div>
           <div className="w-px h-8 bg-slate-700 hidden md:block" />
           <div>

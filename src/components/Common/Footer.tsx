@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, MessageCircle, MapPin, Phone, Mail } from "lucide-react";
 import { COMPANY, SOCIAL_LINKS, FOOTER_LINKS } from "@/lib/constants";
 
-const SOCIAL_ICONS = { Facebook, Instagram, Linkedin };
+const SOCIAL_ICONS = { Facebook, Instagram, Linkedin, WhatsApp: MessageCircle, Google: MapPin };
 
 export default function Footer() {
   return (
@@ -20,7 +20,27 @@ export default function Footer() {
             <p className="text-sm text-slate-400 leading-relaxed max-w-xs mb-6">
               {COMPANY.tagline}
             </p>
-            <div className="flex gap-2.5">
+            <address className="not-italic space-y-3 mb-6 text-sm text-slate-400 max-w-xs">
+              <p className="font-semibold text-slate-300">{COMPANY.legalName}</p>
+              <a
+                href={COMPANY.googleBusinessUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-2 leading-relaxed hover:text-white transition-colors"
+              >
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-slate-500" />
+                {COMPANY.fullAddress}
+              </a>
+              <a href={COMPANY.phoneHref} className="flex items-center gap-2 py-1 hover:text-white transition-colors">
+                <Phone className="w-4 h-4 shrink-0 text-slate-500" />
+                {COMPANY.phone}
+              </a>
+              <a href={`mailto:${COMPANY.email}`} className="flex items-center gap-2 py-1 hover:text-white transition-colors">
+                <Mail className="w-4 h-4 shrink-0 text-slate-500" />
+                {COMPANY.email}
+              </a>
+            </address>
+            <div className="flex flex-wrap gap-2.5">
               {SOCIAL_LINKS.map((s) => {
                 const Icon = SOCIAL_ICONS[s.iconName as keyof typeof SOCIAL_ICONS];
                 return (

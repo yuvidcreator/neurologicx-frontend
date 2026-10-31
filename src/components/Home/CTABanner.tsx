@@ -35,10 +35,10 @@ export default function CTABanner() {
             Contact Us
           </Link>
           <Link
-            href="/case-studies"
+            href="/services/"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-slate-700 hover:border-blue-500 text-slate-300 hover:text-white font-semibold rounded-xl transition-colors text-base w-full sm:w-auto"
           >
-            See Our Work
+            Explore Services
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

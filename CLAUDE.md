@@ -12,7 +12,8 @@ Senior Full Stack Developer. Build production-quality, static marketing pages fo
 | Public brand | NeurologicX |
 | What | AI-powered SaaS products + third-party cloud & DevOps for agencies |
 | Portfolio | Software & IoT projects under the parent company |
-| Where | Pune and Solapur, Maharashtra, India |
+| Where | Solapur (registered office) and Pune, Maharashtra, India |
+| Founder | Yuvraj Chandrakant Limbole — https://yuvraaj.in |
 | Domain | www.neurologicx.com |
 | Tagline | "Take your business to the next level with AI and automation." |
 | B2B targets | Tech agencies (cloud/DevOps) + businesses adopting vertical SaaS |
@@ -26,11 +27,21 @@ Senior Full Stack Developer. Build production-quality, static marketing pages fo
 | **ClinicFlow** | Healthcare | cyan-500 → blue-600 | `clinicflow` |
 | **StockSense** | Logistics & Warehousing | amber-500 → orange-600 | `stocksense` |
 
-### Agency Services (see `src/lib/services.ts`)
+### Services (see `src/lib/services.ts`)
 | Service | Providers | ID |
 |---|---|---|
+| **AI-Powered Software Development** | — | `ai-software-development` |
+| **Web Portal Development** | — | `portal-development` |
+| **E-commerce Development** | — | `ecommerce-development` |
+| **Data Engineering** | AWS, Azure, GCP | `data-engineering` |
 | **Cloud Infrastructure Migration** | AWS, Azure, GCP | `cloud-migration` |
 | **DevOps Engineering** | AWS, Azure, GCP | `devops` |
+
+### Real Clients (see `src/lib/clients.ts`)
+Saffron Beauty Salon (Dhanori, Pune) and Suman Buildcon (Bhairav Nagar, Dhanori, Pune). Name + industry + location only — never invent case studies, metrics or testimonials.
+
+### NAP (Name, Address, Phone) — must match Google Business Profile exactly
+All NAP lives in `COMPANY` (`src/lib/constants.ts`): `legalName`, `address`, `fullAddress`, `phone`, `googleBusinessUrl`. It is rendered in the footer, contact page, legal pages and the sitewide JSON-LD (`src/lib/schema.ts`). Never retype it elsewhere.
 
 ### Data Layer — always import from lib, never hardcode content
 | File | Exports |
@@ -38,8 +49,9 @@ Senior Full Stack Developer. Build production-quality, static marketing pages fo
 | `src/lib/constants.ts` | `COMPANY`, `NAV_LINKS`, `SOCIAL_LINKS`, `FOOTER_LINKS`, `HOME_STATS` |
 | `src/lib/products.ts` | `products: Product[]` |
 | `src/lib/services.ts` | `services: Service[]` |
-| `src/lib/case-studies.ts` | `caseStudies: CaseStudy[]` |
-| `src/types/index.ts` | `Product`, `Service`, `CaseStudy`, `Testimonial`, `NavLink`, `SocialLink` |
+| `src/lib/clients.ts` | `clients: Client[]` |
+| `src/lib/schema.ts` | `siteSchema` (ProfessionalService + WebSite JSON-LD, rendered in layout) |
+| `src/types/index.ts` | `Product`, `Service`, `Client`, `NavLink`, `SocialLink` |
 
 ---
 
@@ -63,21 +75,20 @@ src/
 ├── app/
 │   ├── layout.tsx                       # Root layout — Geist, metadataBase, OG tags
 │   ├── globals.css                      # @import "tailwindcss"
-│   ├── sitemap.ts                       # Auto-generates /sitemap.xml
+│   ├── sitemap.ts                       # /sitemap.xml — bump a page's lastModified when its content changes
+│   ├── robots.ts                        # /robots.txt — disallows all on Vercel preview deploys
 │   ├── page.tsx                         # Home — assembles all Home/ sections
 │   ├── products/page.tsx                # Products page
 │   ├── services/page.tsx                # Services page
-│   ├── case-studies/
-│   │   ├── page.tsx                     # Case studies index
-│   │   └── [slug]/page.tsx             # Individual study (generateStaticParams)
 │   ├── about/page.tsx                   # About page
-│   ├── contact/page.tsx                 # Contact page (mailto form)
+│   ├── contact/page.tsx                 # Contact page (NAP, founder, map embed, mailto form)
 │   ├── privacy-policy/page.tsx          # Privacy Policy
 │   └── terms/page.tsx                   # Terms & Conditions
 ├── components/
 │   ├── Common/
 │   │   ├── Navbar.tsx                   # Sticky, transparent→solid on scroll ("use client")
-│   │   ├── Footer.tsx                   # 5-column footer
+│   │   ├── Footer.tsx                   # 5-column footer with NAP block
+│   │   ├── JsonLd.tsx                   # <script type="application/ld+json"> renderer
 │   │   └── PageHero.tsx                 # Reusable page hero (eyebrow, title, accent, desc)
 │   ├── Home/
 │   │   ├── HeroSection.tsx              # Full-viewport hero with orbs + dot grid
@@ -85,25 +96,23 @@ src/
 │   │   ├── ProductsTeaser.tsx           # 3 product cards (PRODUCT_STYLES map inside)
 │   │   ├── ServicesOverview.tsx         # 2 service cards
 │   │   ├── WhyNeurologicX.tsx           # 6-point differentiator grid
-│   │   ├── CaseStudiesTeaser.tsx        # 3 case study cards
+│   │   ├── ClientsSection.tsx           # Real clients (also used on About, id="clients")
 │   │   └── CTABanner.tsx               # Shared CTA section (used across pages)
 │   ├── Products/
 │   │   └── ProductsGrid.tsx             # Alternating detail cards per product
 │   ├── Services/
 │   │   ├── ServicesDetail.tsx           # Full service cards with capabilities grid
 │   │   └── EngagementProcess.tsx        # 4-step numbered process
-│   ├── CaseStudies/
-│   │   └── CaseStudiesGrid.tsx          # All 4 case studies with metrics + testimonial
 │   └── About/                           # (content is inline in about/page.tsx)
 ├── lib/
 │   ├── constants.ts
 │   ├── products.ts
 │   ├── services.ts
-│   └── case-studies.ts
+│   ├── clients.ts
+│   └── schema.ts
 ├── types/
 │   └── index.ts
 public/
-├── robots.txt                           # Allow all, Sitemap: .../sitemap.xml
 └── bg-coming-soon.jpg                   # (legacy, unused)
 ```
 
@@ -193,7 +202,7 @@ className="text-sm uppercase tracking-widest text-blue-400 font-medium"   // Eye
 4. **Mobile-first** — base = mobile, `md:` and `lg:` for breakpoints
 5. **No comments** — unless the WHY is non-obvious
 6. **Real content only** — NeurologicX B2B AI copy; never lorem ipsum
-7. **SEO on every page** — export `metadata` with title + description (template: `"%s | NeurologicX"`)
+7. **SEO on every page** — export `metadata` with title, description, `keywords` and `alternates.canonical` (template: `"%s | NeurologicX"`)
 8. **`next/image` for images** — never bare `<img>`
 9. **Reuse before creating** — check `components/Common/` first
 10. **No animation libraries** — Tailwind `animate-` and CSS transitions only
@@ -213,7 +222,10 @@ className="text-sm uppercase tracking-widest text-blue-400 font-medium"   // Eye
 
 ## Social & Contact
 ```ts
-email:    "hello@neurologicx.com"
+email:    "info@neurologicx.com"
+phone:    "+91-8263931667"   // primary business number, WhatsApp too
+address:  "Maruti Mandir, Near, Bhima Nagar Road, Bande Sankul Nagar, Dnyaneshwar Nagar, Vishnupuri, Jule, Solapur, Maharashtra 413008"
+gbp:      "https://share.google/E4xiPA7g4CeqsFwfC"
 facebook: "https://www.facebook.com/nurologicx/"
 instagram:"https://www.instagram.com/neurologicx/"
 linkedin: "https://www.linkedin.com/c/neurologicx/"
@@ -227,11 +239,7 @@ linkedin: "https://www.linkedin.com/c/neurologicx/"
 | Home | `/` | ✅ Built |
 | Products | `/products/` | ✅ Built |
 | Services | `/services/` | ✅ Built |
-| Case Studies Index | `/case-studies/` | ✅ Built |
-| Case Study — Lumina Beauty | `/case-studies/lumina-beauty-saloniq/` | ✅ Built |
-| Case Study — Dr. Choudhary | `/case-studies/dr-choudhary-clinic-clinicflow/` | ✅ Built |
-| Case Study — SwiftLog | `/case-studies/swiftlog-stocksense/` | ✅ Built |
-| Case Study — TechWave | `/case-studies/techwave-devops-aws-migration/` | ✅ Built |
+| Case Studies | `/case-studies/*` | ❌ Removed (sample content) — 308 redirect to `/about/#clients` |
 | About | `/about/` | ✅ Built |
 | Contact | `/contact/` | ✅ Built |
 | Privacy Policy | `/privacy-policy/` | ✅ Built |
@@ -246,7 +254,6 @@ linkedin: "https://www.linkedin.com/c/neurologicx/"
 3. **OG image** — create `/app/opengraph-image.tsx` for auto-generated social share cards
 4. **Individual product pages** — `/products/saloniq/`, `/products/clinicflow/`, `/products/stocksense/` (deep-dive landing per product)
 5. **Analytics integration** — Google Analytics 4 or Plausible via `layout.tsx` Script tag
-6. **robots.txt** — convert `public/robots.txt` to `app/robots.ts` for programmatic control
 7. **Better content pass** — sharpen hero copy, improve case study storytelling, add FAQ sections
 8. **Contact form backend** — replace mailto form with Resend / Formspree integration
 9. **Blog/Resources** — `/blog/` section for SEO content marketing
@@ -260,7 +267,7 @@ linkedin: "https://www.linkedin.com/c/neurologicx/"
 - `metadataBase: new URL("https://www.neurologicx.com")` in `layout.tsx`
 - All pages are `○ (Static)` or `● (SSG)` — zero server-side rendering
 - `sitemap.xml` auto-generated at `/sitemap.xml`
-- `robots.txt` at `public/robots.txt` references `https://www.neurologicx.com/sitemap.xml`
+- `robots.txt` generated by `app/robots.ts`: allow all + sitemap on production, `Disallow: /` on preview deploys
 - **Package manager:** yarn — `package-lock.json` is gitignored, only `yarn.lock` committed
 - **To deploy:** push to GitHub → Vercel auto-deploys from `main` branch
 - **Never run `npm` commands** — always use `yarn dev`, `yarn build`, `yarn add`, etc.

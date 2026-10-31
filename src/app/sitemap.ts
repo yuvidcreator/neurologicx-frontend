@@ -1,26 +1,17 @@
 import type { MetadataRoute } from "next";
-import { caseStudies } from "@/lib/case-studies";
+import { COMPANY } from "@/lib/constants";
 
-const BASE = "https://www.neurologicx.com";
+// Update a page's lastModified only when its content actually changes; Google ignores lastmod values that change on every build.
+const PAGES: MetadataRoute.Sitemap = [
+  { url: "/",                lastModified: "2026-10-31", changeFrequency: "weekly",  priority: 1.0 },
+  { url: "/services/",       lastModified: "2026-10-31", changeFrequency: "monthly", priority: 0.9 },
+  { url: "/products/",       lastModified: "2026-10-31", changeFrequency: "monthly", priority: 0.9 },
+  { url: "/contact/",        lastModified: "2026-10-31", changeFrequency: "monthly", priority: 0.8 },
+  { url: "/about/",          lastModified: "2026-10-31", changeFrequency: "monthly", priority: 0.7 },
+  { url: "/privacy-policy/", lastModified: "2026-10-31", changeFrequency: "yearly",  priority: 0.3 },
+  { url: "/terms/",          lastModified: "2026-10-31", changeFrequency: "yearly",  priority: 0.3 },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes: MetadataRoute.Sitemap = [
-    { url: `${BASE}/`,               lastModified: new Date(), changeFrequency: "weekly",  priority: 1.0 },
-    { url: `${BASE}/products/`,      lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE}/services/`,      lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE}/case-studies/`,  lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/about/`,         lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/contact/`,       lastModified: new Date(), changeFrequency: "yearly",  priority: 0.7 },
-    { url: `${BASE}/privacy-policy/`,lastModified: new Date(), changeFrequency: "yearly",  priority: 0.3 },
-    { url: `${BASE}/terms/`,         lastModified: new Date(), changeFrequency: "yearly",  priority: 0.3 },
-  ];
-
-  const caseStudyRoutes: MetadataRoute.Sitemap = caseStudies.map((cs) => ({
-    url: `${BASE}/case-studies/${cs.slug}/`,
-    lastModified: new Date(),
-    changeFrequency: "yearly",
-    priority: 0.7,
-  }));
-
-  return [...staticRoutes, ...caseStudyRoutes];
+  return PAGES.map((page) => ({ ...page, url: `${COMPANY.url}${page.url}` }));
 }

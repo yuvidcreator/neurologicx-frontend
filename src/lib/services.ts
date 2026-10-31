@@ -2,6 +2,79 @@ import type { Service } from "@/types";
 
 export const services: Service[] = [
   {
+    id: "ai-software-development",
+    name: "AI-Powered Software Development",
+    tagline: "Custom software with AI built in where it saves real time",
+    description:
+      "We build custom web and mobile software with AI built into the everyday workflow: assistants that answer customer questions, tools that read invoices and forms, smart search and automatic reports. We start with the task that costs your team the most hours, prove the AI handles it reliably, then build the full product around it.",
+    iconName: "BrainCircuit",
+    capabilities: [
+      "AI chatbots and assistants for support and sales",
+      "Invoice, document and form data extraction",
+      "Workflow automation with LLMs and business rules",
+      "Smart search and recommendations over your own data",
+      "Forecasting and predictive analytics",
+      "Custom web and mobile apps with AI features",
+      "Integration with WhatsApp, CRMs and payment gateways",
+      "Monitoring, tuning and support after launch",
+    ],
+  },
+  {
+    id: "portal-development",
+    name: "Web Portal Development",
+    tagline: "Customer, vendor and staff portals built around your process",
+    description:
+      "We build secure web portals where your customers, vendors, partners or staff log in to get work done: place orders, raise and track requests, share documents, approve tasks and see reports. Each portal follows the way your business already works, with role-based access and connections to the tools you use today.",
+    iconName: "LayoutDashboard",
+    capabilities: [
+      "Customer, vendor, dealer and employee portals",
+      "Admin dashboards with reports and analytics",
+      "Role-based logins, permissions and audit logs",
+      "Booking, enquiry and lead management portals",
+      "Document upload and approval workflows",
+      "Integration with ERP, CRM and payment gateways",
+      "Fast, mobile-friendly and SEO-ready builds",
+      "Hosting, maintenance and feature updates",
+    ],
+  },
+  {
+    id: "ecommerce-development",
+    name: "E-commerce Development",
+    tagline: "Online stores that are easy to run and quick to buy from",
+    description:
+      "We build online stores on Shopify, WooCommerce or a custom stack, depending on your catalogue and budget. That covers product catalogues, online payments, shipping and GST invoices, plus an admin panel your team can run without calling a developer for every change.",
+    iconName: "ShoppingCart",
+    capabilities: [
+      "Custom stores and Shopify or WooCommerce builds",
+      "Razorpay, UPI and card payments",
+      "Inventory, order and shipping management",
+      "GST-ready invoices and sales reports",
+      "Product search, filters and recommendations",
+      "WhatsApp and email order notifications",
+      "B2B and wholesale ordering",
+      "Speed, SEO and checkout improvements",
+    ],
+  },
+  {
+    id: "data-engineering",
+    name: "Data Engineering",
+    tagline: "Clean, reliable data your reports and AI can trust",
+    description:
+      "We build pipelines that pull data out of your apps, spreadsheets and databases, clean it, and load it into a warehouse where dashboards and AI models can use it. You get reports that update themselves instead of numbers someone copies into Excel every week.",
+    iconName: "Database",
+    providers: ["AWS", "Azure", "GCP"],
+    capabilities: [
+      "ETL and ELT pipelines with Airflow, dbt or cloud-native tools",
+      "Data warehouses on BigQuery, Redshift or Synapse",
+      "Real-time data streaming",
+      "Data cleaning, validation and quality checks",
+      "Dashboards in Power BI, Looker Studio or Metabase",
+      "Data lakes on S3, Azure Data Lake or Cloud Storage",
+      "Data preparation for AI and machine learning",
+      "Pipeline monitoring, alerts and cost control",
+    ],
+  },
+  {
     id: "cloud-migration",
     name: "Cloud Infrastructure Migration",
     tagline: "A carefully planned move to AWS, Azure or GCP",
